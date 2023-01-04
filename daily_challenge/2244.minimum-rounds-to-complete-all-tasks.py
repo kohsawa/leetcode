@@ -3,7 +3,6 @@
 #
 # [2244] Minimum Rounds to Complete All Tasks
 #
-from collections import Counter
 
 # @lc code=start
 class Solution:
@@ -13,9 +12,8 @@ class Solution:
 
         for i  in c.values():
             if i == 1:
-                r = -1
-                break
-            r += i // 3 + (i % 3 > 0)
+                return -1
+            r += (i + 2) // 3
         return r
 
 # @lc code=end
